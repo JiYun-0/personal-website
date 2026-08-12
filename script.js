@@ -5,6 +5,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // 关闭移动菜单
+      document.querySelector('.nav-links')?.classList.remove('active');
     }
   });
 });
@@ -13,11 +15,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
-    navbar.style.background = 'rgba(13, 17, 23, 0.95)';
+    navbar.style.background = 'rgba(26, 20, 16, 0.98)';
   } else {
-    navbar.style.background = 'rgba(13, 17, 23, 0.85)';
+    navbar.style.background = 'rgba(26, 20, 16, 0.95)';
   }
 });
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
@@ -28,17 +40,34 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.classList.add('visible');
     }
   });
 }, observerOptions);
 
-document.querySelectorAll('.about-card, .project-card, .contact-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+// Add fade-in class to elements and observe them
+document.querySelectorAll('.about-card, .work-card, .skill-group, .contact-card').forEach(el => {
+  el.classList.add('fade-in');
   observer.observe(el);
 });
 
-console.log('个人网站已加载 ✓');
+// Parallax effect for decorative circles
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const circles = document.querySelectorAll('.circle');
+  circles.forEach((circle, index) => {
+    const speed = 0.5 + (index * 0.2);
+    circle.style.transform = `translateY(${scrolled * speed}px)`;
+  });
+});
+
+// Add loading animation
+window.addEventListener('load', () => {
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.5s ease';
+  setTimeout(() => {
+    document.body.style.opacity = '1';
+  }, 100);
+});
+
+console.log('纪云工艺美术品设计工作室 - 网站已加载 ✓');

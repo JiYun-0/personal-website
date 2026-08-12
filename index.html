@@ -3,18 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>纪云 - 个人主页</title>
+  <title>纪云 - 工艺美术品设计师</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- 装饰性背景元素 -->
+  <div class="decoration">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  </div>
+
   <nav class="navbar">
     <div class="container nav-inner">
-      <a href="#" class="logo">纪云</a>
+      <a href="#" class="logo">
+        <span class="logo-mark">艺</span>
+        <span class="logo-text">纪云设计</span>
+      </a>
+      <button class="menu-toggle" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="#about">关于</a></li>
-        <li><a href="#projects">项目</a></li>
+        <li><a href="#works">作品</a></li>
+        <li><a href="#skills">技能</a></li>
         <li><a href="#contact">联系</a></li>
       </ul>
     </div>
@@ -23,100 +39,199 @@
   <header class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="avatar">纪</div>
-        <h1>你好，我是纪云</h1>
-        <p class="tagline">开发者 · 探索者 · 终身学习者</p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">查看项目</a>
-          <a href="https://github.com/纪云-0" class="btn btn-secondary" target="_blank">GitHub</a>
+        <div class="hero-artwork">
+          <div class="art-circle">
+            <div class="art-inner">
+              <span class="art-char">艺</span>
+            </div>
+          </div>
+          <div class="art-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+          </div>
+        </div>
+        <div class="hero-text">
+          <p class="hero-subtitle">工艺美术品设计</p>
+          <h1>你好，我是纪云</h1>
+          <p class="tagline">匠心独运 · 艺蕴匠心 · 器以载道</p>
+          <div class="hero-buttons">
+            <a href="#works" class="btn btn-primary">浏览作品</a>
+            <a href="https://github.com/JiYun-0" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
         </div>
       </div>
+    </div>
+    <!-- 装饰性波浪 -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,70 1440,60 L1440,120 L0,120 Z" fill="var(--bg-secondary)"/>
+      </svg>
     </div>
   </header>
 
   <section id="about" class="section">
     <div class="container">
-      <h2 class="section-title">关于我</h2>
+      <h2 class="section-title">
+        <span class="title-ornament">◆</span>
+        关于我
+        <span class="title-ornament">◆</span>
+      </h2>
       <div class="about-grid">
-        <div class="about-card">
-          <h3>🚀 我是谁</h3>
-          <p>一名热爱编程的开发者，专注于前端开发和全栈学习。喜欢用代码创造有价值的产品，乐于分享和交流。</p>
+        <div class="about-card card-art">
+          <div class="card-decoration"></div>
+          <div class="card-icon">🏺</div>
+          <h3>我是谁</h3>
+          <p>一名热爱传统工艺与现代设计的工艺美术品设计师。擅长陶瓷、漆艺、木雕等传统工艺，致力于将传统文化元素融入现代设计，创造具有时代气息的艺术品。</p>
         </div>
-        <div class="about-card">
-          <h3>💻 技术栈</h3>
-          <div class="tech-list">
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">HTML/CSS</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Git</span>
-            <span class="tech-tag">Node.js</span>
-          </div>
+        <div class="about-card card-art">
+          <div class="card-decoration"></div>
+          <div class="card-icon">🎨</div>
+          <h3>专业方向</h3>
+          <p>专注于工艺美术品设计领域，涵盖陶瓷设计、漆器工艺、民间工艺创新、文创产品设计等方向。相信每一件作品都承载着文化的温度与匠人的心意。</p>
         </div>
-        <div class="about-card">
-          <h3>🎯 兴趣</h3>
-          <p>开源项目、技术写作、AI应用探索。相信持续学习和实践是成长的最好方式。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">项目展示</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-icon">🌐</div>
-          <h3>个人网站</h3>
-          <p>这是我的个人主页，使用纯 HTML/CSS/JS 构建，响应式设计，部署在 GitHub Pages 上。</p>
-          <div class="project-links">
-            <a href="https://jiyunya.eu.cc" target="_blank">在线演示</a>
-            <a href="https://github.com/JiYun-0/personal-website" target="_blank">源码</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-icon">🛠️</div>
-          <h3>待补充</h3>
-          <p>这里可以展示你的其他项目，点击编辑添加你的项目介绍和链接。</p>
-          <div class="project-links">
-            <a href="#">在线演示</a>
-            <a href="#">源码</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-icon">📦</div>
-          <h3>待补充</h3>
-          <p>继续添加你的项目，GitHub 仓库链接可以放在这里。</p>
-          <div class="project-links">
-            <a href="#">在线演示</a>
-            <a href="#">源码</a>
-          </div>
+        <div class="about-card card-art">
+          <div class="card-decoration"></div>
+          <div class="card-icon">✨</div>
+          <h3>设计理念</h3>
+          <p>秉承"师古不泥古，创新不离宗"的理念，在传承传统工艺精髓的基础上，探索材料、形态与功能的新的表达方式，让工艺美术焕发当代生命力。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="works" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">联系我</h2>
+      <h2 class="section-title">
+        <span class="title-ornament">◆</span>
+        作品展示
+        <span class="title-ornament">◆</span>
+      </h2>
+      <div class="works-grid">
+        <div class="work-card">
+          <div class="work-preview">
+            <div class="work-placeholder ceramic">
+              <span class="work-icon">🏺</span>
+              <span class="work-label">陶瓷作品</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <h3>青花瓷瓶</h3>
+            <p class="work-category">陶瓷设计</p>
+            <p class="work-desc">传统青花工艺与现代造型的融合，蓝白相间，清雅脱俗。</p>
+            <div class="work-links">
+              <a href="#" target="_blank">查看作品</a>
+              <a href="#" target="_blank">创作过程</a>
+            </div>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-preview">
+            <div class="work-placeholder lacquer">
+              <span class="work-icon">🪵</span>
+              <span class="work-label">漆器作品</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <h3>剔红花卉盘</h3>
+            <p class="work-category">漆艺创作</p>
+            <p class="work-desc">传承剔红工艺，层层积漆雕琢，展现漆艺的独特韵味。</p>
+            <div class="work-links">
+              <a href="#" target="_blank">查看作品</a>
+              <a href="#" target="_blank">创作过程</a>
+            </div>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-preview">
+            <div class="work-placeholder wood">
+              <span class="work-icon">🪑</span>
+              <span class="work-label">木雕作品</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <h3>根雕摆件</h3>
+            <p class="work-category">木雕工艺</p>
+            <p class="work-desc">因材施艺，顺势造型，保留天然木纹，展现自然之美。</p>
+            <div class="work-links">
+              <a href="#" target="_blank">查看作品</a>
+              <a href="#" target="_blank">创作过程</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-ornament">◆</span>
+        技艺专长
+        <span class="title-ornament">◆</span>
+      </h2>
+      <div class="skills-container">
+        <div class="skill-group">
+          <h3>🏺 传统工艺</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">陶瓷制作</span>
+            <span class="skill-tag">漆艺技法</span>
+            <span class="skill-tag">木雕雕刻</span>
+            <span class="skill-tag">镶嵌工艺</span>
+            <span class="skill-tag">烧制技艺</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>🎨 设计能力</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">创意设计</span>
+            <span class="skill-tag">模型制作</span>
+            <span class="skill-tag">色彩搭配</span>
+            <span class="skill-tag">纹样设计</span>
+            <span class="skill-tag">材质研究</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>💻 数字工具</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Photoshop</span>
+            <span class="skill-tag">Illustrator</span>
+            <span class="skill-tag">Procreate</span>
+            <span class="skill-tag">Rhino</span>
+            <span class="skill-tag">Git/HTML</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-ornament">◆</span>
+        联系我
+        <span class="title-ornament">◆</span>
+      </h2>
       <div class="contact-grid">
-        <div class="contact-item">
-          <span class="contact-icon">🐙</span>
-          <div>
+        <a href="https://github.com/JiYun-0" class="contact-card" target="_blank">
+          <div class="contact-icon">🐙</div>
+          <div class="contact-info">
             <h3>GitHub</h3>
-            <a href="https://github.com/JiYun-0" target="_blank">github.com/JiYun-0</a>
+            <p>github.com/JiYun-0</p>
           </div>
-        </div>
-        <div class="contact-item">
-          <span class="contact-icon">📧</span>
-          <div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a href="mailto:2550274630@qq.com" class="contact-card">
+          <div class="contact-icon">📧</div>
+          <div class="contact-info">
             <h3>邮件</h3>
-            <a href="mailto:2550274630@qq.com">2550274630@qq.com</a>
+            <p>2550274630@qq.com</p>
           </div>
-        </div>
-        <div class="contact-item">
-          <span class="contact-icon">💬</span>
-          <div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <div class="contact-card">
+          <div class="contact-icon">💬</div>
+          <div class="contact-info">
             <h3>社交媒体</h3>
             <p>欢迎通过 GitHub 或邮件与我交流</p>
           </div>
@@ -127,7 +242,11 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 纪云. 使用 GitHub Pages 托管.</p>
+      <div class="footer-art">
+        <span class="art-symbol">❋</span>
+      </div>
+      <p>&copy; 2026 纪云工艺美术品设计工作室</p>
+      <p class="footer-note">匠心传承 · 艺无止境</p>
     </div>
   </footer>
 
