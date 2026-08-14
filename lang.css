@@ -1,0 +1,105 @@
+/* ===== 多语言支持 ===== */
+/* 语言选择器样式 */
+.lang-switcher {
+  position: relative;
+  margin-left: 20px;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Noto Serif SC', serif;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.lang-arrow {
+  font-size: 0.6rem;
+  transition: transform 0.3s ease;
+}
+
+.lang-btn:hover .lang-arrow {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  list-style: none;
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 200;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.lang-switcher:hover .lang-dropdown,
+.lang-dropdown:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-dropdown li {
+  border-bottom: 1px solid var(--border);
+}
+
+.lang-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.lang-dropdown a {
+  display: block;
+  padding: 10px 16px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.lang-dropdown a:hover {
+  background: rgba(212, 165, 116, 0.1);
+  color: var(--accent);
+  padding-left: 20px;
+}
+
+/* 语言切换时的过渡动画 */
+[data-i18n] {
+  transition: opacity 0.3s ease;
+}
+
+.lang-changing [data-i18n] {
+  opacity: 0;
+}
+
+/* ===== 字体适配 ===== */
+html[lang="ja"] body {
+  font-family: 'Noto Serif JP', 'Noto Serif SC', 'SimSun', serif;
+}
+
+html[lang="ko"] body {
+  font-family: 'Noto Serif KR', 'Noto Serif SC', 'SimSun', serif;
+}
+
+html[lang="en"] body {
+  font-family: 'Georgia', 'Noto Serif SC', serif;
+}

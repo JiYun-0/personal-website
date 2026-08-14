@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>霁云 - 工艺美术品设计师</title>
+  <title data-i18n="pageTitle">霁云 - 工艺美术品设计师</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&family=ZCOOL+QingKe+HuangYou&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- 装饰性背景元素 -->
@@ -24,7 +24,7 @@
     <div class="container nav-inner">
       <a href="#" class="logo">
         <span class="logo-mark">艺</span>
-        <span class="logo-text">霁云设计</span>
+        <span class="logo-text" data-i18n="logoText">霁云设计</span>
       </a>
       <button class="menu-toggle" aria-label="菜单">
         <span></span>
@@ -32,10 +32,22 @@
         <span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="#about">关于</a></li>
-        <li><a href="#works">作品</a></li>
-        <li><a href="#skills">技能</a></li>
-        <li><a href="#contact">联系</a></li>
+        <li><a href="#about" data-i18n="navAbout">关于</a></li>
+        <li><a href="#works" data-i18n="navWorks">作品</a></li>
+        <li><a href="#skills" data-i18n="navSkills">技能</a></li>
+        <li><a href="#contact" data-i18n="navContact">联系</a></li>
+        <li class="lang-switcher">
+          <button class="lang-btn" aria-label="选择语言">
+            <span class="lang-current">🇨🇳 中文</span>
+            <span class="lang-arrow">▼</span>
+          </button>
+          <ul class="lang-dropdown">
+            <li><a href="#" data-lang="zh">🇨🇳 中文</a></li>
+            <li><a href="#" data-lang="en">🇺🇸 English</a></li>
+            <li><a href="#" data-lang="ja">🇯🇵 日本語</a></li>
+            <li><a href="#" data-lang="ko">🇰🇷 한국어</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </nav>
@@ -58,11 +70,11 @@
           </div>
         </div>
         <div class="hero-text">
-          <p class="hero-subtitle">工艺美术品设计</p>
-          <h1>你好，我是霁云</h1>
-          <p class="tagline">匠心独运 · 艺蕴匠心 · 器以载道</p>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">工艺美术品设计</p>
+          <h1 data-i18n="heroTitle">你好，我是霁云</h1>
+          <p class="tagline" data-i18n="heroTagline">匠心独运 · 艺蕴匠心 · 器以载道</p>
           <div class="hero-buttons">
-            <a href="#works" class="btn btn-primary">浏览作品</a>
+            <a href="#works" class="btn btn-primary" data-i18n="heroBtnWorks">浏览作品</a>
             <a href="https://github.com/JiYun-0" class="btn btn-secondary" target="_blank">GitHub</a>
           </div>
         </div>
@@ -80,27 +92,27 @@
     <div class="container">
       <h2 class="section-title">
         <span class="title-ornament">◆</span>
-        关于我
+        <span data-i18n="aboutTitle">关于我</span>
         <span class="title-ornament">◆</span>
       </h2>
       <div class="about-grid">
         <div class="about-card card-art">
           <div class="card-decoration"></div>
           <div class="card-icon">🏺</div>
-          <h3>我是谁</h3>
-          <p>一名热爱传统工艺与现代设计的工艺美术品设计师。擅长陶瓷、漆艺、木雕等传统工艺，致力于将传统文化元素融入现代设计，创造具有时代气息的艺术品。</p>
+          <h3 data-i18n="aboutWhoTitle">我是谁</h3>
+          <p data-i18n="aboutWhoDesc">一名热爱传统工艺与现代设计的工艺美术品设计师。擅长陶瓷、漆艺、木雕等传统工艺，致力于将传统文化元素融入现代设计，创造具有时代气息的艺术品。</p>
         </div>
         <div class="about-card card-art">
           <div class="card-decoration"></div>
           <div class="card-icon">🎨</div>
-          <h3>专业方向</h3>
-          <p>专注于工艺美术品设计领域，涵盖陶瓷设计、漆器工艺、民间工艺创新、文创产品设计等方向。相信每一件作品都承载着文化的温度与匠人的心意。</p>
+          <h3 data-i18n="aboutFocusTitle">专业方向</h3>
+          <p data-i18n="aboutFocusDesc">专注于工艺美术品设计领域，涵盖陶瓷设计、漆器工艺、民间工艺创新、文创产品设计等方向。相信每一件作品都承载着文化的温度与匠人的心意。</p>
         </div>
         <div class="about-card card-art">
           <div class="card-decoration"></div>
           <div class="card-icon">✨</div>
-          <h3>设计理念</h3>
-          <p>秉承"师古不泥古，创新不离宗"的理念，在传承传统工艺精髓的基础上，探索材料、形态与功能的新的表达方式，让工艺美术焕发当代生命力。</p>
+          <h3 data-i18n="aboutDesignTitle">设计理念</h3>
+          <p data-i18n="aboutDesignDesc">秉承"师古不泥古，创新不离宗"的理念，在传承传统工艺精髓的基础上，探索材料、形态与功能的新的表达方式，让工艺美术焕发当代生命力。</p>
         </div>
       </div>
     </div>
@@ -110,7 +122,7 @@
     <div class="container">
       <h2 class="section-title">
         <span class="title-ornament">◆</span>
-        作品展示
+        <span data-i18n="worksTitle">作品展示</span>
         <span class="title-ornament">◆</span>
       </h2>
       <div class="works-grid">
@@ -118,16 +130,16 @@
           <div class="work-preview">
             <div class="work-placeholder ceramic">
               <span class="work-icon">🏺</span>
-              <span class="work-label">陶瓷作品</span>
+              <span class="work-label" data-i18n="work1Label">陶瓷作品</span>
             </div>
           </div>
           <div class="work-info">
-            <h3>青花瓷瓶</h3>
-            <p class="work-category">陶瓷设计</p>
-            <p class="work-desc">传统青花工艺与现代造型的融合，蓝白相间，清雅脱俗。</p>
+            <h3 data-i18n="work1Title">青花瓷瓶</h3>
+            <p class="work-category" data-i18n="work1Category">陶瓷设计</p>
+            <p class="work-desc" data-i18n="work1Desc">传统青花工艺与现代造型的融合，蓝白相间，清雅脱俗。</p>
             <div class="work-links">
-              <a href="#" target="_blank">查看作品</a>
-              <a href="#" target="_blank">创作过程</a>
+              <a href="#" target="_blank" data-i18n="viewWork">查看作品</a>
+              <a href="#" target="_blank" data-i18n="workProcess">创作过程</a>
             </div>
           </div>
         </div>
@@ -135,16 +147,16 @@
           <div class="work-preview">
             <div class="work-placeholder lacquer">
               <span class="work-icon">🪵</span>
-              <span class="work-label">漆器作品</span>
+              <span class="work-label" data-i18n="work2Label">漆器作品</span>
             </div>
           </div>
           <div class="work-info">
-            <h3>剔红花卉盘</h3>
-            <p class="work-category">漆艺创作</p>
-            <p class="work-desc">传承剔红工艺，层层积漆雕琢，展现漆艺的独特韵味。</p>
+            <h3 data-i18n="work2Title">剔红花卉盘</h3>
+            <p class="work-category" data-i18n="work2Category">漆艺创作</p>
+            <p class="work-desc" data-i18n="work2Desc">传承剔红工艺，层层积漆雕琢，展现漆艺的独特韵味。</p>
             <div class="work-links">
-              <a href="#" target="_blank">查看作品</a>
-              <a href="#" target="_blank">创作过程</a>
+              <a href="#" target="_blank" data-i18n="viewWork">查看作品</a>
+              <a href="#" target="_blank" data-i18n="workProcess">创作过程</a>
             </div>
           </div>
         </div>
@@ -152,16 +164,16 @@
           <div class="work-preview">
             <div class="work-placeholder wood">
               <span class="work-icon">🪑</span>
-              <span class="work-label">木雕作品</span>
+              <span class="work-label" data-i18n="work3Label">木雕作品</span>
             </div>
           </div>
           <div class="work-info">
-            <h3>根雕摆件</h3>
-            <p class="work-category">木雕工艺</p>
-            <p class="work-desc">因材施艺，顺势造型，保留天然木纹，展现自然之美。</p>
+            <h3 data-i18n="work3Title">根雕摆件</h3>
+            <p class="work-category" data-i18n="work3Category">木雕工艺</p>
+            <p class="work-desc" data-i18n="work3Desc">因材施艺，顺势造型，保留天然木纹，展现自然之美。</p>
             <div class="work-links">
-              <a href="#" target="_blank">查看作品</a>
-              <a href="#" target="_blank">创作过程</a>
+              <a href="#" target="_blank" data-i18n="viewWork">查看作品</a>
+              <a href="#" target="_blank" data-i18n="workProcess">创作过程</a>
             </div>
           </div>
         </div>
@@ -173,32 +185,32 @@
     <div class="container">
       <h2 class="section-title">
         <span class="title-ornament">◆</span>
-        技艺专长
+        <span data-i18n="skillsTitle">技艺专长</span>
         <span class="title-ornament">◆</span>
       </h2>
       <div class="skills-container">
         <div class="skill-group">
-          <h3>🏺 传统工艺</h3>
+          <h3>🏺 <span data-i18n="skillsTradTitle">传统工艺</span></h3>
           <div class="skill-tags">
-            <span class="skill-tag">陶瓷制作</span>
-            <span class="skill-tag">漆艺技法</span>
-            <span class="skill-tag">木雕雕刻</span>
-            <span class="skill-tag">镶嵌工艺</span>
-            <span class="skill-tag">烧制技艺</span>
+            <span class="skill-tag" data-i18n="skillCeramic">陶瓷制作</span>
+            <span class="skill-tag" data-i18n="skillLacquer">漆艺技法</span>
+            <span class="skill-tag" data-i18n="skillWood">木雕雕刻</span>
+            <span class="skill-tag" data-i18n="skillInlay">镶嵌工艺</span>
+            <span class="skill-tag" data-i18n="skillFiring">烧制技艺</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>🎨 设计能力</h3>
+          <h3>🎨 <span data-i18n="skillsDesignTitle">设计能力</span></h3>
           <div class="skill-tags">
-            <span class="skill-tag">创意设计</span>
-            <span class="skill-tag">模型制作</span>
-            <span class="skill-tag">色彩搭配</span>
-            <span class="skill-tag">纹样设计</span>
-            <span class="skill-tag">材质研究</span>
+            <span class="skill-tag" data-i18n="skillCreative">创意设计</span>
+            <span class="skill-tag" data-i18n="skillModel">模型制作</span>
+            <span class="skill-tag" data-i18n="skillColor">色彩搭配</span>
+            <span class="skill-tag" data-i18n="skillPattern">纹样设计</span>
+            <span class="skill-tag" data-i18n="skillMaterial">材质研究</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>💻 数字工具</h3>
+          <h3>💻 <span data-i18n="skillsDigitalTitle">数字工具</span></h3>
           <div class="skill-tags">
             <span class="skill-tag">Photoshop</span>
             <span class="skill-tag">Illustrator</span>
@@ -215,7 +227,7 @@
     <div class="container">
       <h2 class="section-title">
         <span class="title-ornament">◆</span>
-        联系我
+        <span data-i18n="contactTitle">联系我</span>
         <span class="title-ornament">◆</span>
       </h2>
       <div class="contact-grid">
@@ -230,7 +242,7 @@
         <a href="mailto:2550274630@qq.com" class="contact-card">
           <div class="contact-icon">📧</div>
           <div class="contact-info">
-            <h3>邮件</h3>
+            <h3 data-i18n="contactEmail">邮件</h3>
             <p>2550274630@qq.com</p>
           </div>
           <span class="contact-arrow">→</span>
@@ -238,8 +250,8 @@
         <div class="contact-card">
           <div class="contact-icon">💬</div>
           <div class="contact-info">
-            <h3>社交媒体</h3>
-            <p>欢迎通过 GitHub 或邮件与我交流</p>
+            <h3 data-i18n="contactSocial">社交媒体</h3>
+            <p data-i18n="contactSocialDesc">欢迎通过 GitHub 或邮件与我交流</p>
           </div>
         </div>
       </div>
@@ -251,12 +263,13 @@
       <div class="footer-art">
         <span class="art-symbol">❋</span>
       </div>
-      <p>&copy; 2026 霁云工艺美术品设计工作室</p>
-      <p class="footer-note">匠心传承 · 艺无止境</p>
+      <p data-i18n="footerCopy">&copy; 2026 霁云工艺美术品设计工作室</p>
+      <p class="footer-note" data-i18n="footerNote">匠心传承 · 艺无止境</p>
     </div>
   </footer>
 
   <script src="strands.js"></script>
+  <script src="lang.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
