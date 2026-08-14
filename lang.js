@@ -281,13 +281,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // 初始化语言
   initLanguage();
 
+  // 点击按钮切换下拉菜单
+  const langBtn = document.querySelector('.lang-btn');
+  if (langBtn) {
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const switcher = document.querySelector('.lang-switcher');
+      switcher.classList.toggle('active');
+      langBtn.classList.toggle('active');
+    });
+  }
+
   // 绑定语言切换链接
   document.querySelectorAll('.lang-dropdown a').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       const lang = link.getAttribute('data-lang');
       updateLangButton(lang);
       setLanguage(lang);
+      // 关闭下拉菜单
+      document.querySelector('.lang-switcher')?.classList.remove('active');
+      document.querySelector('.lang-btn')?.classList.remove('active');
     });
   });
 
@@ -296,6 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const switcher = document.querySelector('.lang-switcher');
     if (switcher && !switcher.contains(e.target)) {
       switcher.classList.remove('active');
+      document.querySelector('.lang-btn')?.classList.remove('active');
     }
   });
 });

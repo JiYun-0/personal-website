@@ -30,7 +30,8 @@
   transition: transform 0.3s ease;
 }
 
-.lang-btn:hover .lang-arrow {
+.lang-btn:hover .lang-arrow,
+.lang-btn.active .lang-arrow {
   transform: rotate(180deg);
 }
 
@@ -52,8 +53,8 @@
   overflow: hidden;
 }
 
-.lang-switcher:hover .lang-dropdown,
-.lang-dropdown:hover {
+/* 默认隐藏，通过 JS 控制显示 */
+.lang-switcher.active .lang-dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
