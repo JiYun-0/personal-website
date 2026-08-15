@@ -108,60 +108,6 @@ const translations = {
     footerCopy: '&copy; 2026 Jiyun Arts & Crafts Studio',
     footerNote: 'Craftsmanship Passed Down · Art Without Bounds'
   },
-  ja: {
-    pageTitle: '霁雲 - 工芸品デザイナー',
-    logoText: '霁雲デザイン',
-    navAbout: 'About',
-    navWorks: '作品',
-    navSkills: 'スキル',
-    navContact: 'Contact',
-    heroSubtitle: '工芸品デザイン',
-    heroTitle: 'はじめまして、霁雲です',
-    heroTagline: '匠の心 · 芸術の魂 · 器に道を伝える',
-    heroBtnWorks: '作品を見る',
-    aboutTitle: '自己紹介',
-    aboutWhoTitle: '私は誰か',
-    aboutWhoDesc: '伝統工芸と現代デザインを愛する工芸品デザイナー。陶芸、漆芸、木彫りを得意とし、伝統的な文化要素を現代デザインに融合させ、時代の息吹を感じる芸術作品の創造に取り組んでいます。',
-    aboutFocusTitle: '専門分野',
-    aboutFocusDesc: '工芸品デザイン分野に特化し、陶磁器デザイン、漆器工芸、民間工芸の革新、文化商品デザインなどをカバーしています。すべての作品が文化の温もりと職人の心を宿していると考えています。',
-    aboutDesignTitle: '設計理念',
-    aboutDesignDesc: '「古を師としつつも古に囚われず、創新しても本から離れない」という理念のもと、伝統工芸の精髓を継承しながら、素材・形態・機能の新たな表現を探究し、工芸に当代の生命力を吹き込みます。',
-    worksTitle: '作品展示',
-    work1Label: '陶芸作品',
-    work1Title: '青花磁瓶',
-    work1Category: '陶磁器デザイン',
-    work1Desc: '伝統的な青花工芸と現代の造形の融合。青と白の相剝れ、清雅で世俗を脱する美しさ。',
-    work2Label: '漆芸作品',
-    work2Title: '剔紅花卉盤',
-    work2Category: '漆芸創作',
-    work2Desc: '剔紅工芸を継承し、層々として漆を積み彫刻し、漆芸の独特の韻味を表現する。',
-    work3Label: '木彫作品',
-    work3Title: '根彫置物',
-    work3Category: '木彫工芸',
-    work3Desc: '材に基づいて芸を施し、勢いに応じて形を作り、天然の木目を守り、自然の美しさを表現する。',
-    viewWork: '作品を見る',
-    workProcess: '制作過程',
-    skillsTitle: '技術专长',
-    skillsTradTitle: '伝統工芸',
-    skillsDesignTitle: 'デザイン力',
-    skillsDigitalTitle: 'デジタルツール',
-    skillCeramic: '陶芸製作',
-    skillLacquer: '漆芸技法',
-    skillWood: '木彫刻',
-    skillInlay: '镶嵌工芸',
-    skillFiring: '焼成技術',
-    skillCreative: 'クリエイティブデザイン',
-    skillModel: 'モデリング',
-    skillColor: '色彩構成',
-    skillPattern: '文様デザイン',
-    skillMaterial: '素材研究',
-    contactTitle: 'お問い合わせ',
-    contactEmail: 'メール',
-    contactSocial: 'ソーシャルメディア',
-    contactSocialDesc: 'GitHubやメールでご連絡ください',
-    footerCopy: '&copy; 2026 霁雲工芸品デザインスタジオ',
-    footerNote: '匠の技を受け継ぎ · 芸術に終わりなし'
-  },
   ko: {
     pageTitle: '지운 - 공예품 디자이너',
     logoText: '지운 디자인',
@@ -271,7 +217,7 @@ function initLanguage() {
 function updateLangButton(lang) {
   const langBtn = document.querySelector('.lang-current');
   if (langBtn) {
-    const flags = { zh: '🇨🇳 中文', en: '🇺🇸 English', ja: '🇯🇵 日本語', ko: '🇰🇷 한국어' };
+    const flags = { zh: '🇨🇳 中文', en: '🇺🇸 English' };
     langBtn.textContent = flags[lang] || '🇨🇳 中文';
   }
 }
